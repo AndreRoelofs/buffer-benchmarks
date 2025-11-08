@@ -5,7 +5,7 @@ package generated;
 option go_package = "protobuf/generated;generated";
 
 enum MessageType {
-  DefaultMessageType = 0;
+  DefaultMT = 0;
   CastAdd = 1;
   CastRemove = 2;
   ReactionAdd = 3;
@@ -20,18 +20,18 @@ enum MessageType {
 }
 
 enum SignatureScheme {
-  DefaultSignatureScheme = 0;
+  DefaultSS = 0;
   Ed25519 = 1;
   Eip712 = 2;
 }
 
 enum HashScheme {
-  DefaultHashScheme = 0;
+  DefaultHS = 0;
   Blake3 = 1;
 }
 
 enum FarcasterNetwork {
-  DefaultFarcasterNetwork = 0;
+  DefaultFN = 0;
   Mainnet = 1;
   Testnet = 2;
   Devnet = 3;

@@ -28,8 +28,7 @@ pub fn encode() -> Vec<u8> {
         fid: Vec::from(constants::SAMPLE_FID),
         network: generated::FarcasterNetwork::Devnet.into(),
     };
-    let mut md_buf = Vec::new();
-    md_buf.reserve(md.encoded_len());
+    let mut md_buf = Vec::with_capacity(md.encoded_len());
     md.encode(&mut md_buf).unwrap();
 
     let m = generated::Message {
@@ -40,10 +39,9 @@ pub fn encode() -> Vec<u8> {
         signature_scheme: generated::SignatureScheme::Ed25519.into(),
         signer: Vec::from(constants::SAMPLE_SIGNER),
     };
-    let mut m_buf = Vec::new();
-    m_buf.reserve(m.encoded_len());
+    let mut m_buf = Vec::with_capacity(m.encoded_len());
     m.encode(&mut m_buf).unwrap();
-    m_buf.into()
+    m_buf
 }
 
 pub fn decode(buf: &[u8]) {

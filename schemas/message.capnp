@@ -1,11 +1,11 @@
-using Go = import "/go.capnp";
+# using Go = import "/go.capnp";
 @0xe6989e0b6c84e686;
 
-$Go.package("generated");
-$Go.import("github.com/kcchu/buffer-benchmarks/capnproto/generated");
+# $Go.package("generated");
+# $Go.import("github.com/kcchu/buffer-benchmarks/capnproto/generated");
 
 enum MessageType {
-  defaultMessageType @0;
+  defaultMT @0;
   castAdd @1;
   castRemove @2;
   reactionAdd @3;
@@ -20,18 +20,18 @@ enum MessageType {
 }
 
 enum SignatureScheme {
-  defaultSignatureScheme @0;
+  defaultSS @0;
   ed25519 @1;
   eip712 @2;
 }
 
 enum HashScheme {
-  defaultHashScheme @0;
+  defaultHS @0;
   blake3 @1;
 }
 
 enum FarcasterNetwork {
-  defaultFarcasterNetwork @0;
+  defaultFN @0;
   mainnet @1;
   testnet @2;
   devnet @3;
